@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+		<title>Bemat Admin v1 - Modals</title>
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+		<!-- 引导核心的CSS - 包括与每一页 -->
+	<link rel="shortcut icon" href="https://cdn.c2cmalls.com/bemat-admin/dist/favicon.ico" type="image/x-icon">
+		<!-- 引导核心的CSS - 包括与每一页 -->
+		<link href="https://cdn.c2cmalls.com/bemat-admin/dist/css/bootstrap.min.css" rel="stylesheet">
+		<!-- Bemat联系CSS - 包括与每一页 -->
+		<link href="https://cdn.c2cmalls.com/bemat-admin/dist/css/themes/theme-default-info/bemat-admin.min.css" rel="stylesheet" id="theme-switcher">
+		<link rel="stylesheet" href="https://cdnjs.c2cbc.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdn.c2cmalls.com/font-awesome-animation/0.0.7/dist/font-awesome-animation.min.css">
+	</head>
+	<body class="container-fluid dark-sidebar dark-header-brand sidebar-collapsed">
+		<div id="page-wrapper">
+			<aside id="left-content" data-toggle="open" data-default="open" data-size="">
+				<header class="header-container">
+					<div class="header-wrapper">
+						<div id="header-brand">
+							<div class="logo padding-left-2">
+								<span class="logo-image">Y</span>
+								<span class="logo-text">炎木</span>
+							</div>
+						</div>
+					</div>
+				</header>
+				<div id="sidebar-wrapper">
+					<div id="userbox">
+						<div id="useravatar">
+							<div class="avatar-thumbnail">
+								<img src="https://cdn.c2cmalls.com/bemat-admin/dist/img/avatar.png" class="img-circle"/>
+							</div>
+						</div>
+						<div id="userinfo">
+							<div class="btn-group">
+								<button type="button" class="btn btn-default-bright btn-flat dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">John Doe <i class="material-icons">arrow_drop_down</i>
+								</button>
+								<ul class="dropdown-menu">
+									<li><a href="#"><i class="material-icons">person</i>Your Profile</a></li>
+									<li><a href="#"><i class="material-icons">settings</i>Settings</a></li>
+									<li class="divider"></li>
+									<li><a href="#"><i class="material-icons">lock</i> Lock</a></li>
+									<li class="divider"></li>
+									<li><a href="#"><i class="material-icons">exit_to_app</i> Log Out</a></li>
+								</ul>
+							</div>
+						</div>
+					</div> <!-- END: #userbox -->
+					<nav id="sidebar">
+						<ul>
+							<li>
+								<a href="index.html">
+									<span class="menu-item-ico"><i class="material-icons">dashboard</i></span>
+									<span class="menu-item-name">仪表台</span>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<span class="menu-item-ico"><i class="material-icons">extension</i></span>
+									<span class="menu-item-name">Components</span>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<span class="menu-item-ico"><i class="material-icons">format_align_left</i></span>
+									<span class="menu-item-name">Forms</span>
+								</a>
+								<ul>
+									<li><a href="page-forms-basic.html">Form Elements Basic</a></li>
+									<li>
+										<a href="">Editors <span class="badge badge-primary">3</span></a>
+										<ul>
+											<li><a href="page-editors-summernote.html">Summernote Editor</a></li>
+											<li><a href="page-editors-ckeditor.html">CKEditor</a></li>
+											<li><a href="page-editors-wysihtml5.html">wysihtml5</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</nav><!-- END: nav#sidebar -->	
+				</div>
+			</aside>
+			<section id="right-content">
+				<header class="header-container">
+					<div class="header-wrapper">
+						<div id="header-toolbar">
+							<ul class="toolbar toolbar-left">
+								<li>
+									<a id="sidebar-toggle" data-state="open" href="#"><i class="material-icons">menu</i></a>
+								</li>
+							</ul>
+							<div id="searchbox">
+								<span class="search-icon"><i class="material-icons">search</i></span>
+								<input id="search-input" placeholder="搜索" type="text" />
+							</div>
+							<ul class="toolbar toolbar-right">
+								<li>
+									<a href="#" data-toggle="modal" data-target="#demoModal2" title="Toggle Fullscreen"><i class="fa fa-question-circle fa-2x"></i></a>
+								</li>
+								<li id="user-profile" class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+										<div class="avatar">
+										<i class="fa fa-fort-awesome fa-2x"></i>
+										</div>
+										<div class="user">
+											<span class="username">John Doe</span>
+										</div>
+										<span class="expand-ico"><i class="material-icons">expand_more</i></span>
+									</a>
+									<ul class="dropdown-menu dropdown-menu-right">
+										<li><a href="#"><i class="material-icons">person</i>你的个人资料</a></li>
+										<li><a href="#"><i class="material-icons">settings</i>设置</a></li>
+										<li class="divider"></li>
+										<li><a href="#"><i class="material-icons">lock</i> Lock</a></li>
+										<li class="divider"></li>
+										<li><a href="#"><i class="material-icons">exit_to_app</i> 退出</a></li>
+									</ul>
+								</li><!-- /#user-profile -->
+							</ul><!-- /.navbar-right -->					
+						</div>
+					</div><!-- /#header-toolbar -->
+				</header>
+				<section id="right-content-wrapper">
+					<section class="page-header alternative-header">
+						<ol class="breadcrumb">
+							<li>炎木</li>
+							<li>开发者</li>
+							<li>字体图标</li>
+							<li>字体真棒</li>
+						</ol>
+						<div class="page-header_title">
+							<h1>
+							字体真棒
+								<span class="page-header_subtitle"></span>
+							</h1>
+						</div>
+					</section>
+					<section class="page-content">
+						<div class="row">
+							<div class="col-lg-12">
+								<p class="lead">HTML页面里只需要添加一行
+<pre>&lt;link rel="stylesheet" href="https://cdnjs.c2cbc.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css"&gt;
+</pre>
+								</p>								
+							</div>
+						</div>
+	<div class="row">
+							<div class="col-lg-12">
+							  	<div id="social-buttons" class="hidden-xs">
+    <div id="jssocial"></div>
+<div class="container">
+  </div>
+  <div id="search-input" class="hide"></div>
+  <div id="icons">
+    <section class="icon-set" id="new">
+  <h2 class="page-header">20个新图标的4.5</h2>
+  <div class="row fontawesome-icon-list">
+      <div class="fa-hover col-md-3 col-sm-4" data-name="bluetooth"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-bluetooth fa-2x"></i>bluetooth</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="bluetooth-b"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-bluetooth-b fa-2x"></i>bluetooth-b</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="codiepie"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-codiepie fa-2x"></i>codiepie</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="credit-card-alt"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-credit-card-alt fa-2x"></i>credit-card-alt</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="edge"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-edge fa-2x"></i>edge</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="fort-awesome"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-fort-awesome fa-2x"></i>fort-awesome</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="hashtag"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-hashtag fa-2x"></i>hashtag</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="mixcloud"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-mixcloud fa-2x"></i>mixcloud</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="modx"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-modx fa-2x"></i>modx</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="pause-circle"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-pause-circle fa-2x"></i>pause-circle</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="pause-circle-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-pause-circle-o fa-2x"></i>pause-circle-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="percent"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-percent fa-2x"></i>percent</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="product-hunt"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-product-hunt fa-2x"></i>product-hunt</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="reddit-alien"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-reddit-alien fa-2x"></i>reddit-alien</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="scribd"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-scribd fa-2x"></i>scribd</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="shopping-bag"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-shopping-bag fa-2x"></i>shopping-bag</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="shopping-basket"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-shopping-basket fa-2x"></i>shopping-basket</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="stop-circle"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-stop-circle fa-2x"></i>stop-circle</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="stop-circle-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-stop-circle-o fa-2x"></i>stop-circle-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="usb"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-usb fa-2x"></i>usb</a></div>
+  </div>
+</section>
+    <section id="web-application">
+  <h2 class="page-header">Web应用程序图标</h2>
+  <div class="row fontawesome-icon-list">
+      <div class="fa-hover col-md-3 col-sm-4" data-name="adjust"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-adjust fa-2x"></i>adjust</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="anchor"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-anchor fa-2x"></i>anchor</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="archive"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-archive fa-2x"></i>archive</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="area-chart"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-area-chart fa-2x"></i>area-chart</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="arrows"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-arrows fa-2x"></i>arrows</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="arrows-h"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-arrows-h fa-2x"></i>arrows-h</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="arrows-v"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-arrows-v fa-2x"></i>arrows-v</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="asterisk"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-asterisk fa-2x"></i>asterisk</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="at"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-at fa-2x"></i>at</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="automobile"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-automobile fa-2x"></i>automobile</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="balance-scale"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-balance-scale fa-2x"></i>balance-scale</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="ban"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-ban fa-2x"></i>ban</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="bank"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-bank fa-2x"></i>bank</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="bar-chart"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-bar-chart fa-2x"></i>bar-chart</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="bar-chart-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-bar-chart-o fa-2x"></i>bar-chart-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="barcode"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-barcode fa-2x"></i>barcode</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="bars"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-bars fa-2x"></i>bars</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="battery-0"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-battery-0 fa-2x"></i>battery-0</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="battery-1"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-battery-1 fa-2x"></i>battery-1</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="battery-2"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-battery-2 fa-2x"></i>battery-2</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="battery-3"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-battery-3 fa-2x"></i>battery-3</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="battery-4"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-battery-4 fa-2x"></i>battery-4</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="battery-empty"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-battery-empty fa-2x"></i>battery-empty</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="battery-full"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-battery-full fa-2x"></i>battery-full</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="battery-half"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-battery-half fa-2x"></i>battery-half</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="battery-quarter"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-battery-quarter fa-2x"></i>battery-quarter</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="battery-three-quarters"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-battery-three-quarters fa-2x"></i>battery-three-quarters</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="bed"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-bed fa-2x"></i>bed</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="beer"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-beer fa-2x"></i>beer</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="bell"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-bell fa-2x"></i>bell</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="bell-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-bell-o fa-2x"></i>bell-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="bell-slash"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-bell-slash fa-2x"></i>bell-slash</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="bell-slash-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-bell-slash-o fa-2x"></i>bell-slash-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="bicycle"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-bicycle fa-2x"></i>bicycle</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="binoculars"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-binoculars fa-2x"></i>binoculars</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="birthday-cake"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-birthday-cake fa-2x"></i>birthday-cake</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="bluetooth"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-bluetooth fa-2x"></i>bluetooth</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="bluetooth-b"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-bluetooth-b fa-2x"></i>bluetooth-b</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="bolt"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-bolt fa-2x"></i>bolt</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="bomb"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-bomb fa-2x"></i>bomb</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="book"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-book fa-2x"></i>book</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="bookmark"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-bookmark fa-2x"></i>bookmark</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="bookmark-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-bookmark-o fa-2x"></i>bookmark-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="briefcase"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-briefcase fa-2x"></i>briefcase</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="bug"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-bug fa-2x"></i>bug</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="building"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-building fa-2x"></i>building</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="building-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-building-o fa-2x"></i>building-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="bullhorn"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-bullhorn fa-2x"></i>bullhorn</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="bullseye"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-bullseye fa-2x"></i>bullseye</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="bus"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-bus fa-2x"></i>bus</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="taxi"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-cab fa-2x"></i>cab</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="calculator"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-calculator fa-2x"></i>calculator</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="calendar"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-calendar fa-2x"></i>calendar</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="calendar-check-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-calendar-check-o fa-2x"></i>calendar-check-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="calendar-minus-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-calendar-minus-o fa-2x"></i>calendar-minus-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="calendar-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-calendar-o fa-2x"></i>calendar-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="calendar-plus-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-calendar-plus-o fa-2x"></i>calendar-plus-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="calendar-times-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-calendar-times-o fa-2x"></i>calendar-times-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="camera"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-camera fa-2x"></i>camera</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="camera-retro"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-camera-retro fa-2x"></i>camera-retro</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="car"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-car fa-2x"></i>car</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="caret-square-o-down"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-caret-square-o-down fa-2x"></i>caret-square-o-down</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="caret-square-o-left"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-caret-square-o-left fa-2x"></i>caret-square-o-left</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="caret-square-o-right"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-caret-square-o-right fa-2x"></i>caret-square-o-right</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="caret-square-o-up"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-caret-square-o-up fa-2x"></i></a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="cart-arrow-down"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-cart-arrow-down fa-2x"></i></a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="cart-plus"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-cart-plus fa-2x"></i></a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="cc"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-cc fa-2x"></i>cc</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="certificate"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-certificate fa-2x"></i>certificate</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="check"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-check fa-2x"></i>check</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="check-circle"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-check-circle fa-2x"></i>check-circle</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="check-circle-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-check-circle-o fa-2x"></i>check-circle-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="check-square"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-check-square fa-2x"></i>check-square</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="check-square-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-check-square-o fa-2x"></i>check-square-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="child"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-child fa-2x"></i>child</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="circle"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-circle fa-2x"></i>circle</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="circle-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-circle-o fa-2x"></i>circle-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="circle-o-notch"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-circle-o-notch fa-2x"></i>circle-o-notch</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="circle-thin"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-circle-thin fa-2x"></i>circle-thin</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="clock-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-clock-o fa-2x"></i>clock-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="clone"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-clone fa-2x"></i>clone</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="times"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-close fa-2x"></i>close</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="cloud"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-cloud fa-2x"></i>cloud</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="cloud-download"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-cloud-download fa-2x"></i>cloud-download</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="cloud-upload"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-cloud-upload fa-2x"></i>cloud-upload</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="code"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-code fa-2x"></i>code</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="code-fork"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-code-fork fa-2x"></i>code-fork</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="coffee"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-coffee fa-2x"></i>coffee</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="cog"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-cog fa-2x"></i>cog</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="cogs"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-cogs fa-2x"></i>cogs</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="comment"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-comment fa-2x"></i>comment</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="comment-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-comment-o fa-2x"></i>comment-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="commenting"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-commenting fa-2x"></i>commenting</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="commenting-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-commenting-o fa-2x"></i>commenting-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="comments"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-comments fa-2x"></i>comments</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="comments-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-comments-o fa-2x"></i>comments-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="compass"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-compass fa-2x"></i>compass</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="copyright"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-copyright fa-2x"></i>copyright</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="creative-commons"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-creative-commons fa-2x"></i>creative-commons</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="credit-card"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-credit-card fa-2x"></i>credit-card</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="crop"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-crop fa-2x"></i>crop</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="crosshairs"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-crosshairs fa-2x"></i>crosshairs</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="cube"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-cube fa-2x"></i>cube</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="cubes"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-cubes fa-2x"></i>cubes</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="cutlery"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-cutlery fa-2x"></i>cutlery</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="tachometer"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-dashboard fa-2x"></i>dashboard</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="database"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-database fa-2x"></i>database</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="desktop"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-desktop fa-2x"></i>desktop</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="diamond"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-diamond fa-2x"></i>diamond</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="dot-circle-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-dot-circle-o fa-2x"></i>dot-circle-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="download"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-download fa-2x"></i>download</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="pencil-square-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-edit fa-2x"></i>edit</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="ellipsis-h"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-ellipsis-h fa-2x"></i>ellipsis-h</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="ellipsis-v"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-ellipsis-v fa-2x"></i>ellipsis-v</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="envelope"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-envelope fa-2x"></i>envelope</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="envelope-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-envelope-o fa-2x"></i>envelope-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="envelope-square"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-envelope-square fa-2x"></i>envelope-square</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="eraser"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-eraser fa-2x"></i>eraser</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="exchange"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-exchange fa-2x"></i>exchange</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="exclamation"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-exclamation fa-2x"></i>exclamation</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="exclamation-circle"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-exclamation-circle fa-2x"></i>exclamation-circle</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="exclamation-triangle"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-exclamation-triangle fa-2x"></i>exclamation-triangle</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="external-link"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-external-link fa-2x"></i>external-link</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="external-link-square"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-external-link-square fa-2x"></i>external-link-square</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="eye"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-eye fa-2x"></i>eye</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="eye-slash"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-eye-slash fa-2x"></i>eye-slash</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="eyedropper"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-eyedropper fa-2x"></i>eyedropper</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="fax"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-fax fa-2x"></i>fax</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="rss"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-feed fa-2x"></i>feed</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="female"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-female fa-2x"></i>female</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="fighter-jet"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-fighter-jet fa-2x"></i>fighter-jet</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="file-archive-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-file-archive-o fa-2x"></i>file-archive-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="file-audio-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-file-audio-o fa-2x"></i>file-audio-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="file-code-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-file-code-o fa-2x"></i>file-code-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="file-excel-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-file-excel-o fa-2x"></i>file-excel-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="file-image-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-file-image-o fa-2x"></i>file-image-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="file-video-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-file-movie-o fa-2x"></i>file-movie-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="file-pdf-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-file-pdf-o fa-2x"></i>file-pdf-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="file-image-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-file-photo-o fa-2x"></i>file-photo-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="file-image-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-file-picture-o fa-2x"></i>file-picture-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="file-powerpoint-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-file-powerpoint-o fa-2x"></i>file-powerpoint-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="file-audio-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-file-sound-o fa-2x"></i>file-sound-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="file-video-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-file-video-o fa-2x"></i>file-video-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="file-word-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-file-word-o fa-2x"></i>file-word-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="file-archive-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-file-zip-o fa-2x"></i>file-zip-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="film"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-film fa-2x"></i>film</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="filter"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-filter fa-2x"></i>filter</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="fire"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-fire fa-2x"></i>fire</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="fire-extinguisher"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-fire-extinguisher fa-2x"></i>fire-extinguisher</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="flag"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-flag fa-2x"></i>flag</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="flag-checkered"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-flag-checkered fa-2x"></i>flag-checkered</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="flag-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-flag-o fa-2x"></i>flag-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="bolt"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-flash fa-2x"></i>flash</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="flask"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-flask fa-2x"></i>flask</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="folder"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-folder fa-2x"></i>folder</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="folder-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-folder-o fa-2x"></i>folder-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="folder-open"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-folder-open fa-2x"></i>folder-open</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="folder-open-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-folder-open-o fa-2x"></i>folder-open-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="frown-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-frown-o fa-2x"></i>frown-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="futbol-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-futbol-o fa-2x"></i>futbol-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="gamepad"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-gamepad fa-2x"></i>gamepad</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="gavel"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-gavel fa-2x"></i>gavel</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="cog"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-gear fa-2x"></i>gear</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="cogs"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-gears fa-2x"></i>gears</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="gift"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-gift fa-2x"></i>gift</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="glass"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-glass fa-2x"></i>glass</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="globe"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-globe fa-2x"></i>globe</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="graduation-cap"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-graduation-cap fa-2x"></i>graduation-cap</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="users"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-group fa-2x"></i>group</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="hand-rock-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-hand-grab-o fa-2x"></i>hand-grab-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="hand-lizard-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-hand-lizard-o fa-2x"></i>hand-lizard-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="hand-paper-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-hand-paper-o fa-2x"></i>hand-paper-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="hand-peace-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-hand-peace-o fa-2x"></i>hand-peace-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="hand-pointer-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-hand-pointer-o fa-2x"></i>hand-pointer-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="hand-rock-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-hand-rock-o fa-2x"></i>hand-rock-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="hand-scissors-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-hand-scissors-o fa-2x"></i>hand-scissors-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="hand-spock-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-hand-spock-o fa-2x"></i>hand-spock-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="hand-paper-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-hand-stop-o fa-2x"></i>hand-stop-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="hashtag"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-hashtag fa-2x"></i>hashtag</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="hdd-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-hdd-o fa-2x"></i>hdd-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="headphones"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-headphones fa-2x"></i>headphones</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="heart"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-heart fa-2x"></i>heart</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="heart-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-heart-o fa-2x"></i>heart-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="heartbeat"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-heartbeat fa-2x"></i>heartbeat</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="history"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-history fa-2x"></i>history</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="home"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-home fa-2x"></i>home</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="bed"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-hotel fa-2x"></i>hotel</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="hourglass"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-hourglass fa-2x"></i>hourglass</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="hourglass-start"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-hourglass-1 fa-2x"></i>hourglass-1</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="hourglass-half"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-hourglass-2 fa-2x"></i>hourglass-2</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="hourglass-end"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-hourglass-3 fa-2x"></i>hourglass-3</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="hourglass-end"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-hourglass-end fa-2x"></i>hourglass-end</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="hourglass-half"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-hourglass-half fa-2x"></i>hourglass-half</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="hourglass-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-hourglass-o fa-2x"></i>hourglass-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="hourglass-start"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-hourglass-start fa-2x"></i>hourglass-start</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="i-cursor"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-i-cursor fa-2x"></i>i-cursor</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="picture-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-image fa-2x"></i>image</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="inbox"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-inbox fa-2x"></i>inbox</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="industry"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-industry fa-2x"></i>industry</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="info"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-info fa-2x"></i>info</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="info-circle"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-info-circle fa-2x"></i>info-circle</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="university"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-institution fa-2x"></i>institution</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="key"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-key fa-2x"></i>key</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="keyboard-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-keyboard-o fa-2x"></i>keyboard-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="language"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-language fa-2x"></i>language</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="laptop"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-laptop fa-2x"></i>laptop</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="leaf"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-leaf fa-2x"></i>leaf</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="gavel"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-legal fa-2x"></i>legal</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="lemon-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-lemon-o fa-2x"></i>lemon-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="level-down"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-level-down fa-2x"></i>level-down</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="level-up"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-level-up fa-2x"></i>level-up</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="life-bouy"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-life-bouy fa-2x"></i>life-bouy</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="life-ring"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-life-buoy fa-2x"></i>life-buoy</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="life-ring"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-life-ring fa-2x"></i>life-ring</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="life-saver"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-life-saver fa-2x"></i>life-saver</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="lightbulb-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-lightbulb-o fa-2x"></i>lightbulb-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="line-chart"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-line-chart fa-2x"></i>line-chart</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="location-arrow"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-location-arrow fa-2x"></i>location-arrow</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="lock"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-lock fa-2x"></i>lock</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="magic"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-magic fa-2x"></i>magic</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="magnet"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-magnet fa-2x"></i>magnet</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="mail-forward"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-mail-forward fa-2x"></i>mail-forward</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="mail-reply"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-mail-reply fa-2x"></i>mail-reply</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="reply-all"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-mail-reply-all fa-2x"></i>mail-reply-all</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="male"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-male fa-2x"></i>male</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="map"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-map fa-2x"></i>map</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="map-marker"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-map-marker fa-2x"></i>map-marker</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="map-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-map-o fa-2x"></i>map-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="map-pin"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-map-pin fa-2x"></i>map-pin</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="map-signs"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-map-signs fa-2x"></i>map-signs</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="meh-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-meh-o fa-2x"></i>meh-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="microphone"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-microphone fa-2x"></i>microphone</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="microphone-slash"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-microphone-slash fa-2x"></i>microphone-slash</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="minus"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-minus fa-2x"></i>minus</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="minus-circle"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-minus-circle fa-2x"></i>minus-circle</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="minus-square"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-minus-square fa-2x"></i>minus-square</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="minus-square-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-minus-square-o fa-2x"></i>minus-square-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="mobile"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-mobile fa-2x"></i>mobile</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="mobile-phone"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-mobile-phone fa-2x"></i>mobile-phone</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="money"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-money fa-2x"></i>money</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="moon-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-moon-o fa-2x"></i>moon-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="graduation-cap"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-mortar-board fa-2x"></i>mortar-board</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="motorcycle"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-motorcycle fa-2x"></i>motorcycle</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="mouse-pointer"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-mouse-pointer fa-2x"></i>mouse-pointer</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="music"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-music fa-2x"></i>music</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="bars"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-navicon fa-2x"></i>navicon</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="newspaper-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-newspaper-o fa-2x"></i>newspaper-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="object-group"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-object-group fa-2x"></i>object-group</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="object-ungroup"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-object-ungroup fa-2x"></i>object-ungroup</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="paint-brush"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-paint-brush fa-2x"></i>paint-brush</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="paper-plane"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-paper-plane fa-2x"></i>paper-plane</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="paper-plane-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-paper-plane-o fa-2x"></i>paper-plane-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="paw"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-paw fa-2x"></i>paw</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="pencil"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-pencil fa-2x"></i>pencil</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="pencil-square"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-pencil-square fa-2x"></i>pencil-square</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="pencil-square-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-pencil-square-o fa-2x"></i>pencil-square-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="percent"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-percent fa-2x"></i>percent</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="phone"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-phone fa-2x"></i>phone</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="phone-square"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-phone-square fa-2x"></i>phone-square</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="photo"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-photo fa-2x"></i>photo</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="picture-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-picture-o fa-2x"></i>picture-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="pie-chart"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-pie-chart fa-2x"></i>pie-chart</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="plane"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-plane fa-2x"></i>plane</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="plug"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-plug fa-2x"></i>plug</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="plus"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-plus fa-2x"></i>plus</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="plus-circle"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-plus-circle fa-2x"></i>plus-circle</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="plus-square"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-plus-square fa-2x"></i>plus-square</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="plus-square-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-plus-square-o fa-2x"></i>plus-square-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="power-off"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-power-off fa-2x"></i>power-off</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="print"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-print fa-2x"></i>print</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="puzzle-piece"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-puzzle-piece fa-2x"></i>puzzle-piece</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="qrcode"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-qrcode fa-2x"></i>qrcode</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="question"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-question fa-2x"></i>question</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="question-circle"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-question-circle fa-2x"></i>question-circle</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="quote-left"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-quote-left fa-2x"></i>quote-left</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="quote-right"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-quote-right fa-2x"></i>quote-right</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="random"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-random fa-2x"></i>random</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="recycle"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-recycle fa-2x"></i>recycle</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="refresh"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-refresh fa-2x"></i>refresh</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="registered"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-registered fa-2x"></i>registered</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="times"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-remove fa-2x"></i>remove</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="bars"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-reorder fa-2x"></i>reorder</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="reply"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-reply fa-2x"></i>reply</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="reply-all"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-reply-all fa-2x"></i>reply-all</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="retweet"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-retweet fa-2x"></i>retweet</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="road"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-road fa-2x"></i>road</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="rocket"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-rocket fa-2x"></i>rocket</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="rss"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-rss fa-2x"></i>rss</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="rss-square"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-rss-square fa-2x"></i>rss-square</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="search"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-search fa-2x"></i>search</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="search-minus"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-search-minus fa-2x"></i>search-minus</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="search-plus"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-search-plus fa-2x"></i>search-plus</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="paper-plane"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-send fa-2x"></i>send</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="paper-plane-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-send-o fa-2x"></i>send-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="server"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-server fa-2x"></i>server</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="share"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-share fa-2x"></i>share</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="share-alt"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-share-alt fa-2x"></i>share-alt</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="share-alt-square"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-share-alt-square fa-2x"></i>share-alt-square</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="share-square"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-share-square fa-2x"></i>share-square</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="share-square-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-share-square-o fa-2x"></i>share-square-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="shield"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-shield fa-2x"></i>shield</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="ship"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-ship fa-2x"></i>ship</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="shopping-bag"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-shopping-bag fa-2x"></i>shopping-bag</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="shopping-basket"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-shopping-basket fa-2x"></i>shopping-basket</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="shopping-cart"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-shopping-cart fa-2x"></i>shopping-cart</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="sign-in"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-sign-in fa-2x"></i>sign-in</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="sign-out"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-sign-out fa-2x"></i>sign-out</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="signal"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-signal fa-2x"></i>signal</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="sitemap"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-sitemap fa-2x"></i>sitemap</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="sliders"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-sliders fa-2x"></i>sliders</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="smile-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-smile-o fa-2x"></i>smile-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="futbol-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-soccer-ball-o fa-2x"></i>soccer-ball-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="sort"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-sort fa-2x"></i>sort</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="sort-alpha-asc"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-sort-alpha-asc fa-2x"></i>sort-alpha-asc</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="sort-alpha-desc"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-sort-alpha-desc fa-2x"></i>sort-alpha-desc</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="sort-amount-asc"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-sort-amount-asc fa-2x"></i>sort-amount-asc</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="sort-amount-desc"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-sort-amount-desc fa-2x"></i>sort-amount-desc</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="sort-asc"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-sort-asc fa-2x"></i>sort-asc</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="sort-desc"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-sort-desc fa-2x"></i>sort-desc</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="sort-desc"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-sort-down fa-2x"></i>sort-down</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="sort-numeric-asc"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-sort-numeric-asc fa-2x"></i>sort-numeric-asc</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="sort-numeric-desc"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-sort-numeric-desc fa-2x"></i>sort-numeric-desc</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="sort-asc"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-sort-up fa-2x"></i>sort-up</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="space-shuttle"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-space-shuttle fa-2x"></i>space-shuttle</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="spinner"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-spinner fa-2x"></i>spinner</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="spoon"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-spoon fa-2x"></i>spoon</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="square"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-square fa-2x"></i>square</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="square-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-square-o fa-2x"></i>square-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="star"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-star fa-2x"></i>star</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="star-half"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-star-half fa-2x"></i>star-half</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="star-half-empty"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-star-half-empty fa-2x"></i>star-half-empty</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="star-half-full"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-star-half-full fa-2x"></i>star-half-full</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="star-half-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-star-half-o fa-2x"></i>star-half-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="star-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-star-o fa-2x"></i>star-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="sticky-note"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-sticky-note fa-2x"></i>sticky-note</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="sticky-note-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-sticky-note-o fa-2x"></i>sticky-note-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="street-view"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-street-view fa-2x"></i>street-view</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="suitcase"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-suitcase fa-2x"></i>suitcase</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="sun-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-sun-o fa-2x"></i>sun-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="life-ring"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-support fa-2x"></i>support</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="tablet"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-tablet fa-2x"></i>tablet</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="tachometer"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-tachometer fa-2x"></i>tachometer</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="tag"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-tag fa-2x"></i>tag</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="tags"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-tags fa-2x"></i>tags</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="tasks"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-tasks fa-2x"></i>tasks</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="taxi"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-taxi fa-2x"></i>taxi</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="television"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-television fa-2x"></i>television</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="terminal"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-terminal fa-2x"></i>terminal</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="thumb-tack"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-thumb-tack fa-2x"></i>thumb-tack</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="thumbs-down"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-thumbs-down fa-2x"></i>thumbs-down</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="thumbs-o-down"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-thumbs-o-down fa-2x"></i>thumbs-o-down</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="thumbs-o-up"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-thumbs-o-up fa-2x"></i>thumbs-o-up</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="thumbs-up"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-thumbs-up fa-2x"></i>thumbs-up</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="ticket"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-ticket fa-2x"></i>ticket</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="times"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-times fa-2x"></i>times</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="times-circle"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-times-circle fa-2x"></i>times-circle</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="times-circle-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-times-circle-o fa-2x"></i>times-circle-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="tint"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-tint fa-2x"></i>tint</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="caret-square-o-down"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-toggle-down fa-2x"></i>toggle-down</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="caret-square-o-left"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-toggle-left fa-2x"></i>toggle-left</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="toggle-off"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-toggle-off fa-2x"></i>toggle-off</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="toggle-on"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-toggle-on fa-2x"></i>toggle-on</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="caret-square-o-right"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-toggle-right fa-2x"></i>toggle-right</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="caret-square-o-up"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-toggle-up fa-2x"></i>toggle-up</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="trademark"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-trademark fa-2x"></i>trademark</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="trash"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-trash fa-2x"></i>trash</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="trash-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-trash-o fa-2x"></i>trash-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="tree"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-tree fa-2x"></i>tree</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="trophy"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-trophy fa-2x"></i>trophy</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="truck"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-truck fa-2x"></i>truck</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="tty"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-tty fa-2x"></i>tty</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="television"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-tv fa-2x"></i>tv</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="umbrella"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-umbrella fa-2x"></i>umbrella</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="university"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-university fa-2x"></i>university</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="unlock"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-unlock fa-2x"></i>unlock</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="unlock-alt"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-unlock-alt fa-2x"></i>unlock-alt</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="sort"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-unsorted fa-2x"></i>unsorted</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="upload"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-upload fa-2x"></i>upload</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="user"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-user fa-2x"></i>user</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="user-plus"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-user-plus fa-2x"></i>user-plus</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="user-secret"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-user-secret fa-2x"></i>user-secret</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="user-times"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-user-times fa-2x"></i>user-times</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="users"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-users fa-2x"></i>users</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="video-camera"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-video-camera fa-2x"></i>video-camera</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="volume-down"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-volume-down fa-2x"></i>volume-down</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="volume-off"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-volume-off fa-2x"></i>volume-off</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="volume-up"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-volume-up fa-2x"></i>volume-up</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="exclamation-triangle"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-warning fa-2x"></i>warning</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="wheelchair"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-wheelchair fa-2x"></i>wheelchair</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="wifi"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-wifi fa-2x"></i>wifi</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="wrench"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-wrench fa-2x"></i>wrench</a></div>
+  </div>
+</section>
+    <section class="icon-set" id="hand">
+  <h2 class="page-header">手势图标</h2>
+  <div class="row fontawesome-icon-list">
+      <div class="fa-hover col-md-3 col-sm-4" data-name="hand-rock-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-hand-grab-o fa-2x"></i>hand-grab-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="hand-lizard-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-hand-lizard-o fa-2x"></i>hand-lizard-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="hand-o-down"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-hand-o-down fa-2x"></i>hand-o-down</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="hand-o-left"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-hand-o-left fa-2x"></i>hand-o-left</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="hand-o-right"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-hand-o-right fa-2x"></i>hand-o-right</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="hand-o-up"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-hand-o-up fa-2x"></i>hand-o-up</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="hand-paper-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-hand-paper-o fa-2x"></i>hand-paper-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="hand-peace-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-hand-peace-o fa-2x"></i>hand-peace-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="hand-pointer-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-hand-pointer-o fa-2x"></i>hand-pointer-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="hand-rock-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-hand-rock-o fa-2x"></i>hand-rock-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="hand-scissors-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-hand-scissors-o fa-2x"></i>hand-scissors-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="hand-spock-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-hand-spock-o fa-2x"></i>hand-spock-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="hand-paper-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-hand-stop-o fa-2x"></i>hand-stop-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="thumbs-down"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-thumbs-down fa-2x"></i>thumbs-down</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="thumbs-o-down"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-thumbs-o-down fa-2x"></i>thumbs-o-down</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="thumbs-o-up"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-thumbs-o-up fa-2x"></i>thumbs-o-up</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="thumbs-up"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-thumbs-up fa-2x"></i>thumbs-up</a></div>
+  </div>
+</section>
+    <section class="icon-set" id="transportation">
+  <h2 class="page-header">交通图标</h2>
+  <div class="row fontawesome-icon-list">
+      <div class="fa-hover col-md-3 col-sm-4" data-name="ambulance"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-ambulance fa-2x"></i>ambulance</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="automobile"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-automobile fa-2x"></i>automobile</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="bicycle"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-bicycle fa-2x"></i>bicycle</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="bus"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-bus fa-2x"></i>bus</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="cab"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-cab fa-2x"></i>cab</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="car"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-car fa-2x"></i>car</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="fighter-jet"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-fighter-jet fa-2x"></i>fighter-jet</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="motorcycle"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-motorcycle fa-2x"></i>motorcycle</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="plane"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-plane fa-2x"></i>plane</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="rocket"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-rocket fa-2x"></i>rocket</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="ship"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-ship fa-2x"></i>ship</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="space-shuttle"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-space-shuttle fa-2x"></i>space-shuttle</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="subway"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-subway fa-2x"></i>subway</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="taxi"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-taxi fa-2x"></i>taxi</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="train"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-train fa-2x"></i>train</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="truck"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-truck fa-2x"></i>truck</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="wheelchair"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-wheelchair fa-2x"></i>wheelchair</a></div>
+  </div>
+</section>
+    <section class="icon-set" id="gender">
+  <h2 class="page-header">性别图标</h2>
+  <div class="row fontawesome-icon-list">
+      <div class="fa-hover col-md-3 col-sm-4" data-name="genderless"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-genderless fa-2x"></i>genderless</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="transgender"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-intersex fa-2x"></i>intersex</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="mars"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-mars fa-2x"></i>mars</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="mars-double"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-mars-double fa-2x"></i>mars-double</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="mars-stroke"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-mars-stroke fa-2x"></i>mars-stroke</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="mars-stroke-h"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-mars-stroke-h fa-2x"></i>mars-stroke-h</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="mars-stroke-v"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-mars-stroke-v fa-2x"></i>mars-stroke-v</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="mercury"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-mercury fa-2x"></i>mercury</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="neuter"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-neuter fa-2x"></i>neuter</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="transgender"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-transgender fa-2x"></i>transgender</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="transgender-alt"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-transgender-alt fa-2x"></i>transgender-alt</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="venus"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-venus fa-2x"></i>venus</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="venus-double"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-venus-double fa-2x"></i>venus-double</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="venus-mars"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-venus-mars fa-2x"></i>venus-mars</a></div>
+  </div>
+</section>
+    <section class="icon-set" id="file-type">
+  <h2 class="page-header">文件类型图标</h2>
+  <div class="row fontawesome-icon-list">
+      <div class="fa-hover col-md-3 col-sm-4" data-name="file"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-file fa-2x"></i>file</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="file-archive-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-file-archive-o fa-2x"></i>file-archive-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="file-audio-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-file-audio-o fa-2x"></i>file-audio-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="file-code-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-file-code-o fa-2x"></i>file-code-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="file-excel-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-file-excel-o fa-2x"></i>file-excel-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="file-image-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-file-image-o fa-2x"></i>file-image-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="file-video-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-file-movie-o fa-2x"></i>file-movie-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="file-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-file-o fa-2x"></i>file-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="file-pdf-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-file-pdf-o fa-2x"></i>file-pdf-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="file-image-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-file-photo-o fa-2x"></i>file-photo-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="file-image-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-file-picture-o fa-2x"></i>file-picture-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="file-powerpoint-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-file-powerpoint-o fa-2x"></i>file-powerpoint-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="file-audio-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-file-sound-o fa-2x"></i>file-sound-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="file-text"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-file-text fa-2x"></i>file-text</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="file-text-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-file-text-o fa-2x"></i>file-text-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="file-video-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-file-video-o fa-2x"></i>file-video-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="file-word-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-file-word-o fa-2x"></i>file-word-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="file-archive-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-file-zip-o fa-2x"></i>file-zip-o</a></div>
+  </div>
+</section>
+    <section class="icon-set" id="spinner">
+  <h2 class="page-header">微调图标</h2>
+  <div class="alert alert-success">
+    <ul class="fa-ul">
+      <li>
+        <i class="fa fa-info-circle fa-lg fa-li fa-2x"></i>
+        这些图标与FA-旋转 <code>fa-spin</code> class.
+        <a href="../examples/#animated" class="alert-link">工作的伟大。退房纺纱图标的例子</a>.
+      </li>
+    </ul>
+  </div>
+  <div class="row fontawesome-icon-list">
+      <div class="fa-hover col-md-3 col-sm-4" data-name="circle-o-notch fa-spin"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-circle-o-notch fa-spin fa-2x"></i>circle-o-notch</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="cog fa-spin"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-cog fa-spin fa-2x"></i>cog</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="gear fa-spin"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-gear fa-spin fa-2x"></i>gear</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="refresh fa-spin"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-refresh fa-spin fa-2x"></i>refresh</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="spinner fa-spin"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-spinner fa-spin fa-2x"></i>spinner</a></div>
+  </div>
+</section>
+    <section class="icon-set" id="form-control">
+  <h2 class="page-header">表单控件图标</h2>
+  <div class="row fontawesome-icon-list">
+      <div class="fa-hover col-md-3 col-sm-4" data-name="check-square"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-check-square fa-2x"></i>check-square</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="check-square-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-check-square-o fa-2x"></i>check-square-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="circle"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-circle fa-2x"></i>circle</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="circle-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-circle-o fa-2x"></i>circle-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="dot-circle-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-dot-circle-o fa-2x"></i>dot-circle-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="minus-square"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-minus-square fa-2x"></i>minus-square</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="minus-square-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-minus-square-o fa-2x"></i>minus-square-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="plus-square"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-plus-square fa-2x"></i>plus-square</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="plus-square-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-plus-square-o fa-2x"></i>plus-square-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="square"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-square fa-2x"></i>square</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="square-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-square-o fa-2x"></i>square-o</a></div>
+  </div>
+</section>
+    <section class="icon-set" id="payment">
+  <h2 class="page-header">付款图标</h2>
+  <div class="row fontawesome-icon-list">
+      <div class="fa-hover col-md-3 col-sm-4" data-name="cc-amex"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-cc-amex fa-2x"></i>cc-amex</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="cc-diners-club"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-cc-diners-club fa-2x"></i>cc-diners-club</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="cc-discover"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-cc-discover fa-2x"></i>cc-discover</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="cc-jcb"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-cc-jcb fa-2x"></i>cc-jcb</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="cc-mastercard"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-cc-mastercard fa-2x"></i>cc-mastercard</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="cc-paypal"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-cc-paypal fa-2x"></i>cc-paypal</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="cc-stripe"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-cc-stripe fa-2x"></i>cc-stripe</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="cc-visa"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-cc-visa fa-2x"></i>cc-visa</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="credit-card"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-credit-card fa-2x"></i>credit-card</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="credit-card-alt"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-credit-card-alt fa-2x"></i>credit-card-alt</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="google-wallet"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-google-wallet fa-2x"></i>google-wallet</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="paypal"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-paypal fa-2x"></i>paypal</a></div>
+  </div>
+</section>
+    <section class="icon-set" id="chart">
+  <h2 class="page-header">图型图标</h2>
+  <div class="row fontawesome-icon-list">
+      <div class="fa-hover col-md-3 col-sm-4" data-name="area-chart"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-area-chart fa-2x"></i>area-chart</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="bar-chart"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-bar-chart fa-2x"></i>bar-chart</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="bar-chart-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-bar-chart-o fa-2x"></i>bar-chart-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="line-chart"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-line-chart fa-2x"></i>line-chart</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="pie-chart"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-pie-chart fa-2x"></i>pie-chart</a></div>
+  </div>
+</section>
+    <section class="icon-set" id="currency">
+  <h2 class="page-header">货币图标</h2>
+  <div class="row fontawesome-icon-list">
+      <div class="fa-hover col-md-3 col-sm-4" data-name="bitcoin"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-bitcoin fa-2x"></i>bitcoin</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="btc"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-btc fa-2x"></i>btc</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="cny"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-cny fa-2x"></i>cny</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="dollar"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-dollar fa-2x"></i>dollar</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="eur"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-eur fa-2x"></i>eur</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="euro"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-euro fa-2x"></i>euro</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="gbp"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-gbp fa-2x"></i>gbp</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="gg"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-gg fa-2x"></i>gg</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="gg-circle"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-gg-circle fa-2x"></i>gg-circle</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="ils"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-ils fa-2x"></i>ils</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="inr"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-inr fa-2x"></i>inr</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="jpy"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-jpy fa-2x"></i>jpy</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="krw"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-krw fa-2x"></i>krw</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="money"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-money fa-2x"></i>money</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="rmb"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-rmb fa-2x"></i>rmb</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="rouble"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-rouble fa-2x"></i>rouble</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="rub"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-rub fa-2x"></i>rub</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="ruble"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-ruble fa-2x"></i>ruble</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="rupee"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-rupee fa-2x"></i>rupee</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="shekel"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-shekel fa-2x"></i>shekel</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="sheqel"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-sheqel fa-2x"></i>sheqel</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="try"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-try fa-2x"></i>try</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="turkish-lira"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-turkish-lira fa-2x"></i>turkish-lira</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="usd"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-usd fa-2x"></i>usd</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="won"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-won fa-2x"></i>won</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="yen"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-yen fa-2x"></i>yen</a></div>
+  </div>
+</section>
+    <section class="icon-set" id="text-editor">
+  <h2 class="page-header">文本编辑器图标</h2>
+  <div class="row fontawesome-icon-list">
+      <div class="fa-hover col-md-3 col-sm-4" data-name="align-center"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-align-center fa-2x"></i>align-center</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="align-justify"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-align-justify fa-2x"></i>align-justify</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="align-left"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-align-left fa-2x"></i>align-left</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="align-right"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-align-right fa-2x"></i>align-right</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="bold"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-bold fa-2x"></i>bold</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="link"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-chain fa-2x"></i>chain</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="chain-broken"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-chain-broken fa-2x"></i>chain-broken</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="clipboard"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-clipboard fa-2x"></i>clipboard</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="columns"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-columns fa-2x"></i>columns</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="files-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-copy fa-2x"></i>copy</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="scissors"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-cut fa-2x"></i>cut</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="outdent"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-dedent fa-2x"></i>dedent</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="eraser"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-eraser fa-2x"></i>eraser</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="file"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-file fa-2x"></i>file</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="file-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-file-o fa-2x"></i>file-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="file-text"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-file-text fa-2x"></i>file-text</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="file-text-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-file-text-o fa-2x"></i>file-text-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="files-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-files-o fa-2x"></i>files-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="floppy-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-floppy-o fa-2x"></i>floppy-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="font"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-font fa-2x"></i>font</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="header"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-header fa-2x"></i>header</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="indent"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-indent fa-2x"></i>indent</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="italic"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-italic fa-2x"></i>italic</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="link"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-link fa-2x"></i>link</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="list"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-list fa-2x"></i>list</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="list-alt"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-list-alt fa-2x"></i>list-alt</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="list-ol"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-list-ol fa-2x"></i>list-ol</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="list-ul"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-list-ul fa-2x"></i>list-ul</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="outdent"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-outdent fa-2x"></i>outdent</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="paperclip"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-paperclip fa-2x"></i>paperclip</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="paragraph"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-paragraph fa-2x"></i>paragraph</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="clipboard"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-paste fa-2x"></i>paste</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="repeat"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-repeat fa-2x"></i>repeat</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="undo"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-rotate-left fa-2x"></i>rotate-left</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="repeat"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-rotate-right fa-2x"></i>rotate-right</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="floppy-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-save fa-2x"></i>save</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="scissors"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-scissors fa-2x"></i>scissors</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="strikethrough"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-strikethrough fa-2x"></i>strikethrough</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="subscript"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-subscript fa-2x"></i>subscript</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="superscript"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-superscript fa-2x"></i>superscript</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="table"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-table fa-2x"></i>table</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="text-height"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-text-height fa-2x"></i>text-height</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="text-width"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-text-width fa-2x"></i>text-width</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="th"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-th fa-2x"></i>th</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="th-large"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-th-large fa-2x"></i>th-large</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="th-list"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-th-list fa-2x"></i>th-list</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="underline"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-underline fa-2x"></i>underline</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="undo"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-undo fa-2x"></i>undo</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="chain-broken"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-unlink fa-2x"></i>unlink</a></div>
+  </div>
+</section>
+    <section class="icon-set" id="directional">
+  <h2 class="page-header">定向图标</h2>
+  <div class="row fontawesome-icon-list">
+      <div class="fa-hover col-md-3 col-sm-4" data-name="angle-double-down"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-angle-double-down fa-2x"></i>angle-double-down</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="angle-double-left"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-angle-double-left fa-2x"></i>angle-double-left</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="angle-double-right"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-angle-double-right fa-2x"></i>angle-double-right</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="angle-double-up"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-angle-double-up fa-2x"></i>angle-double-up</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="angle-down"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-angle-down fa-2x"></i>angle-down</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="angle-left"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-angle-left fa-2x"></i>angle-left</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="angle-right"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-angle-right fa-2x"></i>angle-right</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="angle-up"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-angle-up fa-2x"></i>angle-up</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="arrow-circle-down"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-arrow-circle-down fa-2x"></i>arrow-circle-down</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="arrow-circle-left"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-arrow-circle-left fa-2x"></i>arrow-circle-left</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="arrow-circle-o-down"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-arrow-circle-o-down fa-2x"></i>arrow-circle-o-down</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="arrow-circle-o-left"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-arrow-circle-o-left fa-2x"></i>arrow-circle-o-left</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="arrow-circle-o-right"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-arrow-circle-o-right fa-2x"></i>arrow-circle-o-right</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="arrow-circle-o-up"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-arrow-circle-o-up fa-2x"></i>arrow-circle-o-up</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="arrow-circle-right"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-arrow-circle-right fa-2x"></i>arrow-circle-right</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="arrow-circle-up"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-arrow-circle-up fa-2x"></i>arrow-circle-up</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="arrow-down"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-arrow-down fa-2x"></i>arrow-down</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="arrow-left"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-arrow-left fa-2x"></i>arrow-left</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="arrow-right"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-arrow-right fa-2x"></i>arrow-right</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="arrow-up"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-arrow-up fa-2x"></i>arrow-up</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="arrows"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-arrows fa-2x"></i>arrows</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="arrows-alt"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-arrows-alt fa-2x"></i>arrows-alt</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="arrows-h"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-arrows-h fa-2x"></i>arrows-h</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="arrows-v"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-arrows-v fa-2x"></i>arrows-v</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="caret-down"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-caret-down fa-2x"></i>caret-down</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="caret-left"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-caret-left fa-2x"></i>caret-left</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="caret-right"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-caret-right fa-2x"></i>caret-right</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="caret-square-o-down"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-caret-square-o-down fa-2x"></i>caret-square-o-down</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="caret-square-o-left"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-caret-square-o-left fa-2x"></i>caret-square-o-left</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="caret-square-o-right"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-caret-square-o-right fa-2x"></i>caret-square-o-right</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="caret-square-o-up"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-caret-square-o-up fa-2x"></i>caret-square-o-up</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="caret-up"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-caret-up fa-2x"></i>caret-up</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="chevron-circle-down"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-chevron-circle-down fa-2x"></i>chevron-circle-down</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="chevron-circle-left"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-chevron-circle-left fa-2x"></i>chevron-circle-left</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="chevron-circle-right"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-chevron-circle-right fa-2x"></i>chevron-circle-right</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="chevron-circle-up"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-chevron-circle-up fa-2x"></i>chevron-circle-up</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="chevron-down"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-chevron-down fa-2x"></i>chevron-down</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="chevron-left"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-chevron-left fa-2x"></i>chevron-left</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="chevron-right"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-chevron-right fa-2x"></i>chevron-right</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="chevron-up"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-chevron-up fa-2x"></i>chevron-up</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="exchange"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-exchange fa-2x"></i>exchange</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="hand-o-down"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-hand-o-down fa-2x"></i>hand-o-down</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="hand-o-left"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-hand-o-left fa-2x"></i>hand-o-left</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="hand-o-right"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-hand-o-right fa-2x"></i>hand-o-right</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="hand-o-up"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-hand-o-up fa-2x"></i>hand-o-up</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="long-arrow-down"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-long-arrow-down fa-2x"></i>long-arrow-down</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="long-arrow-left"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-long-arrow-left fa-2x"></i>long-arrow-left</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="long-arrow-right"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-long-arrow-right fa-2x"></i>long-arrow-right</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="long-arrow-up"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-long-arrow-up fa-2x"></i>long-arrow-up</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="caret-square-o-down"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-toggle-down fa-2x"></i>toggle-down</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="caret-square-o-left"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-toggle-left fa-2x"></i>toggle-left</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="caret-square-o-right"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-toggle-right fa-2x"></i>toggle-right</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="caret-square-o-up"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-toggle-up fa-2x"></i>toggle-up</a></div>
+  </div>
+</section>
+    <section class="icon-set" id="video-player">
+  <h2 class="page-header">视频播放器的图标</h2>
+  <div class="row fontawesome-icon-list">
+      <div class="fa-hover col-md-3 col-sm-4" data-name="arrows-alt"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-arrows-alt fa-2x"></i>arrows-alt</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="backward"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-backward fa-2x"></i>backward</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="compress"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-compress fa-2x"></i>compress</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="eject"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-eject fa-2x"></i>eject</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="expand"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-expand fa-2x"></i>expand</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="fast-backward"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-fast-backward fa-2x"></i>fast-backward</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="fast-forward"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-fast-forward fa-2x"></i>fast-forward</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="forward"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-forward fa-2x"></i>forward</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="pause"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-pause fa-2x"></i>pause</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="pause-circle"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-pause-circle fa-2x"></i>pause-circle</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="pause-circle-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-pause-circle-o fa-2x"></i>pause-circle-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="play"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-play fa-2x"></i>play</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="play-circle"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-play-circle fa-2x"></i>play-circle</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="play-circle-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-play-circle-o fa-2x"></i>play-circle-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="random"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-random fa-2x"></i>random</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="step-backward"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-step-backward fa-2x"></i>step-backward</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="step-forward"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-step-forward fa-2x"></i>step-forward</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="stop"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-stop fa-2x"></i>stop</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="stop-circle"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-stop-circle fa-2x"></i>stop-circle</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="stop-circle-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-stop-circle-o fa-2x"></i>stop-circle-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="youtube-play"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-youtube-play fa-2x"></i>youtube-play</a></div>
+  </div>
+</section>
+    <section class="icon-set" id="brand">
+  <h2 class="page-header">品牌图标</h2>
+  <div class="row fontawesome-icon-list margin-bottom-lg">
+      <div class="fa-hover col-md-3 col-sm-4" data-name="500px"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-500px fa-2x"></i>500px</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="adn"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-adn fa-2x"></i>adn</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="amazon"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-amazon fa-2x"></i>amazon</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="android"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-android fa-2x"></i>android</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="angellist"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-angellist fa-2x"></i>angellist</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="apple"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-apple fa-2x"></i>apple</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="behance"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-behance fa-2x"></i>behance</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="behance-square"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-behance-square fa-2x"></i>behance-square</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="bitbucket"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-bitbucket fa-2x"></i>bitbucket</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="bitbucket-square"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-bitbucket-square fa-2x"></i>bitbucket-square</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="btc"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-bitcoin fa-2x"></i>bitcoin</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="black-tie"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-black-tie fa-2x"></i>black-tie</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="bluetooth"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-bluetooth fa-2x"></i>bluetooth</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="bluetooth-b"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-bluetooth-b fa-2x"></i>bluetooth-b</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="btc"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-btc fa-2x"></i>btc</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="buysellads"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-buysellads fa-2x"></i>buysellads</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="cc-amex"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-cc-amex fa-2x"></i>cc-amex</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="cc-diners-club"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-cc-diners-club fa-2x"></i>cc-diners-club</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="cc-discover"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-cc-discover fa-2x"></i>cc-discover</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="cc-jcb"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-cc-jcb fa-2x"></i>cc-jcb</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="cc-mastercard"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-cc-mastercard fa-2x"></i>cc-mastercard</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="cc-paypal"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-cc-paypal fa-2x"></i>cc-paypal</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="cc-stripe"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-cc-stripe fa-2x"></i>cc-stripe</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="cc-visa"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-cc-visa fa-2x"></i>cc-visa</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="chrome"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-chrome fa-2x"></i>chrome</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="codepen"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-codepen fa-2x"></i>codepen</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="codiepie"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-codiepie fa-2x"></i>codiepie</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="connectdevelop"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-connectdevelop fa-2x"></i>connectdevelop</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="contao"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-contao fa-2x"></i>contao</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="credit-card-alt"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-credit-card-alt fa-2x"></i>credit-card-alt</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="css3"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-css3 fa-2x"></i>css3</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="dashcube"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-dashcube fa-2x"></i>dashcube</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="delicious"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-delicious fa-2x"></i>delicious</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="deviantart"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-deviantart fa-2x"></i>deviantart</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="digg"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-digg fa-2x"></i>digg</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="dribbble"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-dribbble fa-2x"></i>dribbble</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="dropbox"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-dropbox fa-2x"></i>dropbox</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="drupal"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-drupal fa-2x"></i>drupal</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="edge"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-edge fa-2x"></i>edge</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="empire"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-empire fa-2x"></i>empire</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="expeditedssl"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-expeditedssl fa-2x"></i>expeditedssl</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="facebook"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-facebook fa-2x"></i>facebook</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="facebook-f"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-facebook-f fa-2x"></i>facebook-f</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="facebook-official"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-facebook-official fa-2x"></i>facebook-official</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="facebook-square"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-facebook-square fa-2x"></i>facebook-square</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="firefox"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-firefox fa-2x"></i>firefox</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="flickr"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-flickr fa-2x"></i>flickr</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="fonticons"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-fonticons fa-2x"></i>fonticons</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="fort-awesome"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-fort-awesome fa-2x"></i>fort-awesome</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="forumbee"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-forumbee fa-2x"></i>forumbee</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="foursquare"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-foursquare fa-2x"></i>foursquare</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="empire"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-ge fa-2x"></i>ge</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="get-pocket"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-get-pocket fa-2x"></i>get-pocket</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="gg"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-gg fa-2x"></i>gg</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="gg-circle"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-gg-circle fa-2x"></i>gg-circle</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="git"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-git fa-2x"></i>git</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="git-square"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-git-square fa-2x"></i>git-square</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="github"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-github fa-2x"></i>github</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="github-alt"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-github-alt fa-2x"></i>github-alt</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="github-square"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-github-square fa-2x"></i>github-square</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="gratipay"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-gittip fa-2x"></i>gittip</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="google"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-google fa-2x"></i>google</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="google-plus"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-google-plus fa-2x"></i>google-plus</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="google-plus-square"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-google-plus-square fa-2x"></i>google-plus-square</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="google-wallet"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-google-wallet fa-2x"></i>google-wallet</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="gratipay"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-gratipay fa-2x"></i>gratipay</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="houzz"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-houzz fa-2x"></i>houzz</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="html5"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-html5 fa-2x"></i>html5</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="instagram"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-instagram fa-2x"></i>instagram</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="internet-explorer"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-internet-explorer fa-2x"></i>internet-explorer</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="ioxhost"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-ioxhost fa-2x"></i>ioxhost</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="joomla"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-joomla fa-2x"></i>joomla</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="jsfiddle"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-jsfiddle fa-2x"></i>jsfiddle</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="lastfm"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-lastfm fa-2x"></i>lastfm</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="lastfm-square"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-lastfm-square fa-2x"></i>lastfm-square</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="leanpub"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-leanpub fa-2x"></i>leanpub</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="linkedin"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-linkedin fa-2x"></i>linkedin</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="linkedin-square"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-linkedin-square fa-2x"></i>linkedin-square</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="linux"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-linux fa-2x"></i>linux</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="maxcdn"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-maxcdn fa-2x"></i>maxcdn</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="meanpath"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-meanpath fa-2x"></i>meanpath</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="medium"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-medium fa-2x"></i>medium</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="mixcloud"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-mixcloud fa-2x"></i>mixcloud</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="modx"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-modx fa-2x"></i>modx</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="odnoklassniki"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-odnoklassniki fa-2x"></i>odnoklassniki</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="odnoklassniki-square"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-odnoklassniki-square fa-2x"></i>odnoklassniki-square</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="opencart"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-opencart fa-2x"></i>opencart</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="openid"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-openid fa-2x"></i>openid</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="opera"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-opera fa-2x"></i>opera</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="optin-monster"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-optin-monster fa-2x"></i>optin-monster</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="pagelines"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-pagelines fa-2x"></i>pagelines</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="paypal"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-paypal fa-2x"></i>paypal</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="pied-piper"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-pied-piper fa-2x"></i>pied-piper</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="pied-piper-alt"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-pied-piper-alt fa-2x"></i>pied-piper-alt</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="pinterest"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-pinterest fa-2x"></i>pinterest</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="pinterest-p"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-pinterest-p fa-2x"></i>pinterest-p</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="pinterest-square"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-pinterest-square fa-2x"></i>pinterest-square</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="product-hunt"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-product-hunt fa-2x"></i>product-hunt</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="qq"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-qq fa-2x"></i>qq</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="rebel"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-ra fa-2x"></i>ra</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="rebel"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-rebel fa-2x"></i>rebel</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="reddit"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-reddit fa-2x"></i>reddit</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="reddit-alien"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-reddit-alien fa-2x"></i>reddit-alien</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="reddit-square"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-reddit-square fa-2x"></i>reddit-square</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="renren"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-renren fa-2x"></i>renren</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="safari"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-safari fa-2x"></i>safari</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="scribd"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-scribd fa-2x"></i>scribd</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="sellsy"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-sellsy fa-2x"></i>sellsy</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="share-alt"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-share-alt fa-2x"></i>share-alt</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="share-alt-square"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-share-alt-square fa-2x"></i>share-alt-square</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="shirtsinbulk"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-shirtsinbulk fa-2x"></i>shirtsinbulk</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="simplybuilt"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-simplybuilt fa-2x"></i>simplybuilt</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="skyatlas"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-skyatlas fa-2x"></i>skyatlas</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="skype"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-skype fa-2x"></i>skype</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="slack"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-slack fa-2x"></i>slack</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="slideshare"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-slideshare fa-2x"></i>slideshare</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="soundcloud"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-soundcloud fa-2x"></i>soundcloud</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="spotify"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-spotify fa-2x"></i>spotify</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="stack-exchange"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-stack-exchange fa-2x"></i>stack-exchange</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="stack-overflow"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-stack-overflow fa-2x"></i>stack-overflow</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="steam"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-steam fa-2x"></i>steam</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="steam-square"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-steam-square fa-2x"></i>steam-square</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="stumbleupon"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-stumbleupon fa-2x"></i>stumbleupon</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="stumbleupon-circle"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-stumbleupon-circle fa-2x"></i>stumbleupon-circle</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="tencent-weibo"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-tencent-weibo fa-2x"></i>tencent-weibo</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="trello"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-trello fa-2x"></i>trello</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="tripadvisor"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-tripadvisor fa-2x"></i>tripadvisor</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="tumblr"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-tumblr fa-2x"></i>tumblr</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="tumblr-square"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-tumblr-square fa-2x"></i>tumblr-square</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="twitch"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-twitch fa-2x"></i>twitch</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="twitter"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-twitter fa-2x"></i>twitter</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="twitter-square"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-twitter-square fa-2x"></i>twitter-square</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="usb"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-usb fa-2x"></i>usb</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="viacoin"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-viacoin fa-2x"></i>viacoin</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="vimeo"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-vimeo fa-2x"></i>vimeo</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="vimeo-square"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-vimeo-square fa-2x"></i>vimeo-square</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="vine"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-vine fa-2x"></i>vine</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="vk"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-vk fa-2x"></i>vk</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="weixin"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-wechat fa-2x"></i>wechat</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="weibo"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-weibo fa-2x"></i>weibo</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="weixin"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-weixin fa-2x"></i>weixin</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="whatsapp"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-whatsapp fa-2x"></i>whatsapp</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="wikipedia-w"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-wikipedia-w fa-2x"></i>wikipedia-w</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="windows"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-windows fa-2x"></i>windows</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="wordpress"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-wordpress fa-2x"></i>wordpress</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="xing"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-xing fa-2x"></i>xing</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="xing-square"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-xing-square fa-2x"></i>xing-square</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="y-combinator"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-y-combinator fa-2x"></i>y-combinator</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="y-combinator-square"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-y-combinator-square fa-2x"></i>y-combinator-square</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="yahoo"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-yahoo fa-2x"></i>yahoo</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="yc"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-yc fa-2x"></i>yc</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="yc-square"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-yc-square fa-2x"></i>yc-square</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="yelp"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-yelp fa-2x"></i>yelp</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="youtube"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-youtube fa-2x"></i>youtube</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="youtube-play"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-youtube-play fa-2x"></i>youtube-play</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="youtube-square"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-youtube-square fa-2x"></i>youtube-square</a></div>
+  </div>
+</section>
+    <section class="icon-set" id="medical">
+  <h2 class="page-header">医疗图标</h2>
+  <div class="row fontawesome-icon-list">
+      <div class="fa-hover col-md-3 col-sm-4" data-name="ambulance"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-ambulance fa-2x"></i>ambulance</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="h-square"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-h-square fa-2x"></i>h-square</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="heart"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-heart fa-2x"></i>heart</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="heart-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-heart-o fa-2x"></i>heart-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="heartbeat"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-heartbeat fa-2x"></i>heartbeat</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="hospital-o"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-hospital-o fa-2x"></i>hospital-o</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="medkit"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-medkit fa-2x"></i>medkit</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="plus-square"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-plus-square fa-2x"></i>plus-square</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="stethoscope"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-stethoscope fa-2x"></i>stethoscope</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="user-md"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-user-md fa-2x"></i>user-md</a></div>
+      <div class="fa-hover col-md-3 col-sm-4" data-name="wheelchair"><a href="#" data-toggle="modal" data-target="#iconModal"><i class="fa fa-wheelchair fa-2x"></i>wheelchair</a></div>
+  </div>
+</section>
+  </div>	<div class="col-lg-3">
+												<button type="button" class="btn btn-raised btn-default-bright" data-toggle="modal"  data-target="#demoModal2"><i class="fa fa-text-height"></i>使用大小例</button>
+											</div>
+											<div class="col-lg-3">
+												<button type="button" class="btn btn-raised btn-default-bright" data-toggle="modal"  data-target="#demoModal2">模态 2</button>
+											</div>
+											<div class="col-lg-3">
+												<button type="button" class="btn btn-raised btn-default-bright" data-toggle="modal"  data-target="#demoModal1">模态 3</button>
+											</div>
+											<div class="col-lg-3">
+												<button type="button" class="btn btn-raised btn-default-bright" data-toggle="modal"  data-target="#demoModal2">模态 4</button>
+											</div>		</div>		</div>
+						<div class="row">
+							<div class="col-lg-12">
+								<h2 class="text-primary"></h2>
+								<p></p>
+							</div>
+					</section><!-- /#page-content -->
+				</section><!-- /#right-content -->
+			</section><!-- /#right-content-wrapper -->
+		</div></div>
+<!-- Modal HTML -->
+<div id="demoModal1" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title"><i class="fa fa-adjust fa-2x"></i></h4>
+			</div>
+			<div class="modal-body">
+				<p>让Bemat联系确定位置。这意味着将匿名位置数据Bemat管理员，即使没有应用程序正在运行.</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary btn-flat btn-ripple" data-dismiss="modal">不同意</button>
+				<button type="button" class="btn btn-primary btn-flat btn-ripple">同意</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Modal HTML-->
+<div id="demoModal2" class="modal fade" tabindex="3">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">这是图标使用大小说明</h4>
+			</div>
+			<div class="modal-body">
+				<p>原图标class后添加fa-(2x/3x/4x/5x)即可</p><p>&lt;i class="fa-bus fa-2"&gt;&lt;/i&gt;</p>	<button type="button" class="btn btn-raised btn-default-bright" data-toggle="modal"  data-target="#demoModal1">模态 2</button>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary btn-flat btn-ripple" data-dismiss="modal">好的！</button>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="iconModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-close fa-2x"></i></button>
+                <h4 class="modal-title" id="iconModalLabel">&lt;i class="fa-bus"&gt;&lt;/i&gt;</h4>
+                  <div id="copy_text"><pre class="source" style="display: block;" id="text">&lt;i class="fa fa-bus"&gt;&lt;/i&gt;</pre></div>	<div class="modal-footer">
+			</div>
+            </div>
+            <div class="modal-body">
+                <div id="icon-sizes">
+                    <i class="fa fa-bus fa-5x"></i>&nbsp;&nbsp;fa-5x</p>
+                    <span class="hidden-xs">
+                        <i class="fa fa-bus fa-4x"></i>&nbsp;&nbsp;fa-4x</p>
+                        <span class="hidden-sm">
+                            <i class="fa fa-bus fa-3x"></i>&nbsp;&nbsp;fa-3x</p>
+                        </span>
+                        <i class="fa fa-bus fa-2x"></i>&nbsp;&nbsp;fa-2x</p>
+                    </span>
+                </div>
+                <hr />
+                <hr />
+                    <p class="category">小提示：Web应用程序</p>
+                </div>
+                <hr />	
+                <!-- Icon modal window -->
+        
+            </div>
+        </div>
+    </div>
+
+		<!-- 核心脚本 - 包括与每一页-->
+		<script src="https://cdn.c2cmalls.com/bemat-admin/dist/js/jquery-1.10.2.js" type="text/javascript"></script>
+		<script src="https://cdn.c2cmalls.com/bemat-admin/dist/js/jquery-ui.custom.min.js" type="text/javascript"></script>
+		<script src="https://cdn.c2cmalls.com/bemat-admin/dist/js/bootstrap.min.js" type="text/javascript"></script>
+		<script src="https://cdn.c2cmalls.com/bemat-admin/dist/js/modernizr-2.6.2-respond-1.1.0.min.js" type="text/javascript"></script>
+		<!-- 页面级插件脚本 - 仪表板 -->
+	
+		<script src="https://cdn.c2cmalls.com/bemat-admin/dist/vendor/perfectscrollbar/perfect-scrollbar.jquery.min.js" type="text/javascript"></script>
+		<script src="https://cdn.c2cmalls.com/bemat-admin/dist/vendor/bootstrap-select/bootstrap-select.min.js" type="text/javascript"></script>
+		<script src="https://cdn.c2cmalls.com/bemat-admin/dist/vendor/DataTables/js/jquery.dataTables.min.js" type="text/javascript"></script>
+		<script src="https://cdn.c2cmalls.com/bemat-admin/dist/vendor/DataTables/js/dataTables.bootstrap.min.js" type="text/javascript"></script>
+		<script src="https://cdn.c2cmalls.com/bemat-admin/dist/vendor/DataTables/js/dataTables.bootstrap.min.js" type="text/javascript"></script>
+		<script src="https://cdn.c2cmalls.com/bemat-admin/dist/vendor/fullscreen/jquery.fullscreen-min.js" type="text/javascript"></script>
+		<script src="https://cdn.c2cmalls.com/bemat-admin/dist/vendor/fullcalendar/moment.min.js" type="text/javascript"></script>
+		<script src="https://cdn.c2cmalls.com/bemat-admin/dist/vendor/fullcalendar/fullcalendar.min.js" type="text/javascript"></script>
+		<script src="https://cdn.c2cmalls.com/bemat-admin/dist/vendor/sparkline/jquery.sparkline.min.js" type="text/javascript"></script>
+		<script src="https://cdn.c2cmalls.com/bemat-admin/dist/vendor/peity/jquery.peity.min.js" type="text/javascript"></script>
+		<script src="https://cdn.c2cmalls.com/bemat-admin/dist/vendor/chartist/chartist.min.js" type="text/javascript"></script>
+		<script src="https://cdn.c2cmalls.com/bemat-admin/dist/vendor/summernote/summernote.min.js" type="text/javascript"></script>
+		<script src="https://cdn.c2cmalls.com/bemat-admin/dist/vendor/ckeditor/ckeditor.js" type="text/javascript"></script>
+		<script src="https://cdn.c2cmalls.com/bemat-admin/dist/vendor/wysihtml5/bootstrap3-wysihtml5.all.min.js" type="text/javascript"></script>
+		<!--Cerocreativo插件 -->
+		<script src="https://cdn.c2cmalls.com/bemat-admin/dist/vendor/materialRipple/jquery.materialRipple.js" type="text/javascript"></script>
+		<script src="https://cdn.c2cmalls.com/bemat-admin/dist/vendor/snackbar/jquery.snackbar.js" type="text/javascript"></script>
+		<script src="https://cdn.c2cmalls.com/bemat-admin/dist/vendor/toasts/jquery.toasts.js" type="text/javascript"></script>
+		<script src="https://cdn.c2cmalls.com/bemat-admin/dist/vendor/speedDial/jquery.speedDial.js" type="text/javascript"></script>
+		<script src="https://cdn.c2cmalls.com/bemat-admin/dist/vendor/circularProgress/jquery.circularProgress.js" type="text/javascript"></script>
+		<script src="https://cdn.c2cmalls.com/bemat-admin/dist/vendor/linearProgress/jquery.linearProgress.js" type="text/javascript"></script>
+		<script src="https://cdn.c2cmalls.com/bemat-admin/dist/vendor/subheader/jquery.subheader.js" type="text/javascript"></script>
+		<script src="https://cdn.c2cmalls.com/bemat-admin/dist/vendor/simplePieChart/jquery.simplePieChart.js" type="text/javascript"></script>
+		<script src="https://cdn.c2cmalls.com/bemat-admin/dist/vendor/iCheck/icheck.min.js" type="text/javascript"></script>
+		<!-- Bemat管理脚本 - 包含在每一页 -->		
+		<script src="https://cdn.c2cmalls.com/bemat-admin/dist/js/bemat-admin-common.min.js"></script>
+		<script src="https://cdn.c2cmalls.com/bemat-admin/dist/js/bemat-admin-demo.min.js"></script> 
+<script>
+    (function($) {
+        var firstPush = true;
+        var icons = $('.fa-hover'); //列表获取class 
+        var name = 'bus';   ///定义内容为bus
+        icons.on('click', function(e){ 
+            e.preventDefault();//点击事件
+            var oldName = name;
+            name = $(this).data('name');//输出名称为data后内容
+            var code = $(this).data('code');//输出data后code
+            var category = $(this).parent().parent().find('.page-header').html();//输出分类=page-header
+            $('#icon-sizes i').removeClass('fa-'+oldName).addClass('fa-'+name);//合并图标
+            $('#iconModal .source').html('&lt;i class="fa fa-'+name+'"&gt;&lt;/i&gt;');//合并显示'&lt;i class="fa fa-'+name+'"&gt;&lt;/i&gt;
+            $('#icon-code .fa').html('&#x'+code);//
+            $('#icon-code .unicode').html('&lt;i class="fa fa-'+name+'animated-hover"&gt;&lt;/i&gt;');
+            $('#icon-code .category').html('类别: '+category);//
+            $('#iconModalLabel').html('fa-'+name);
+            if (firstPush) {
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                firstPush = false;
+            }
+        });
+    })(jQuery);
+</script>
+	</body>
+</html>
